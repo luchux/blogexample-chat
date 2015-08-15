@@ -1,0 +1,25 @@
+<template name="Chat">
+    <!--Esta sección representa cada row para cada mensaje-->
+    {{#each messages}}
+        <div class="row row-message">
+            <div class="col-xs-12">
+                <h4 class="message">{{message}}</h4>
+                <h5 class="whowhen">{{user}}: {{date}}</h5>
+            </div>
+        </div>
+    {{/each}}
+
+    <!--Esta sección es el input para enviar un mensaje nuevo-->
+    <div class="row">
+        <div class="col-xs-12">
+            <form>
+                <hr>
+                <h6>Escribe tu mensaje</h6>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="linechat"/>
+                    <button class="form-control btn btn-primary" id="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
